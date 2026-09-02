@@ -1,16 +1,16 @@
-import {test} from 'playwright/test';
+import { test } from 'playwright/test';
 
-test.skip('Basic Navigation', async({page})=> {
-  await page.goto('https://about.gitlab.com/');
-  await page.waitForTimeout(3000);
-  await page.reload();
+test.skip('Basic Navigation', async ({ page }) => {
+    await page.goto('https://about.gitlab.com/');
+    await page.waitForTimeout(3000);
+    await page.reload();
 })
 
 
-test.skip('Interacting with web Element on Gitlab',async({page})=>{
-  await page.goto('https://about.gitlab.com/');
-  await page.getByRole('link', {name: 'Get free trial'}).click();
-  await page.getByTestId('new-user-first-name-field').fill('Amal');
-  await page.getByTestId('new-user-last-name-field').fill('Mzoughi');
+test.skip('Interacting with web Element on Gitlab', async ({ page }) => {
+    await page.goto('https://about.gitlab.com/');
+    await page.getByRole('link', { name: 'Get free trial' }).click();
+    await page.getByTestId('new-user-first-name-field').fill('Amal');
+    await page.getByTestId('new-user-last-name-field').fill('Mzoughi');
 
 })
